@@ -37,6 +37,8 @@ for i in range(len(s)):
         k = -1
 
         for j in range(i, len(s)):
+
+            # 0 == S, 1 == W
             if s[j][1] == 0:
                 if spisok_W[k] + M >= int(s[j][0]):
                     M = M - (int(s[j][0]) - spisok_W[k])
