@@ -16,7 +16,6 @@ for i in range(N):
     s.append([int(a), int(b)])
 
 s.sort()
-print(s)
 
 s_count = 0
 count = 0
@@ -25,17 +24,13 @@ next_S = 0
 for i in range(len(s)):
     if M >= int(s[i][0]):
         M = M - int(s[i][0])
-
         if s[i][1] == 0:
             s_count += 1
-
         if s[i][1] == 1:
             spisok_W.append(int(s[i][0]))
-
         count += 1
     else:
         k = -1
-
         for j in range(i, len(s)):
             if s[j][1] == 0:
                 if spisok_W[k] + M >= int(s[j][0]):
@@ -44,7 +39,6 @@ for i in range(len(s)):
                     k -= 1
                 else:
                     break
-
         break
 
-print(s_count, M, "ENNNN")
+print(s_count, M)
